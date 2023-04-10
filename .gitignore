@@ -156,3 +156,4 @@ app_results/
 debug_results/
 *.csv
 *.xlsx
+*.json
