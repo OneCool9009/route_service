@@ -1,10 +1,9 @@
 import pandas as pd
-import numpy as np
 import json
 import os
 from sknetwork.data import from_adjacency_list
 from sknetwork.clustering import Louvain, get_modularity
-from sknetwork.utils import get_neighbors, get_weights
+from sknetwork.utils import get_neighbors
 
 
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -140,7 +139,7 @@ def get_result_dict(source_df):
 
 def calc_clusters():
     graph = get_graph()
-    cluster_labels = get_cluster_labels(graph[0].adjacency, print_modularity=True)
+    cluster_labels = get_cluster_labels(graph[0].adjacency, print_modularity=False)
     result_df = get_result(graph, cluster_labels)
     result_dct = get_result_dict(result_df)
 

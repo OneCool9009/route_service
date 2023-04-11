@@ -3,9 +3,8 @@ import os
 import pandas as pd
 import requests
 from flask import Flask, request, Response
-from flask_restful import Api, Resource
 from werkzeug.serving import run_simple
-from app import calc_clusters
+from core import calc_clusters
 
 PORTAL_URL = 'http://{путь_до_портала_гт2}/carriers-order/updateClusters'
 
